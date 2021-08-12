@@ -19,8 +19,6 @@ import javax.persistence.Version;
 
 @Entity
 @Table(name = "Lieu")
-@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
-@DiscriminatorColumn(name = "type")
 public class Lieu {
 
 	@Id
