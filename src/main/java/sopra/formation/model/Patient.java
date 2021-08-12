@@ -19,17 +19,15 @@ public class Patient extends Personne{
 	String numSecuriteSociale;
 	@OneToMany(mappedBy="patient")
 	private List<Patient> patients;
-	
+
 	public Patient() {
 		super();
+		// TODO Auto-generated constructor stub
 	}
 
-	public Patient(Long id, int version, String numSecuriteSociale, List<Patient> patients) {
-		super();
-		this.id = id;
-		this.version = version;
-		this.numSecuriteSociale = numSecuriteSociale;
-		this.patients = patients;
+	public Patient(Long id, int version, String mail, String mdp) {
+		super(id, version, mail, mdp);
+		// TODO Auto-generated constructor stub
 	}
 
 	public Long getId() {
