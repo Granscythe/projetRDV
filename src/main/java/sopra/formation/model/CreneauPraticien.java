@@ -57,13 +57,17 @@ public class CreneauPraticien {
 	}
 
 
+<<<<<<< HEAD
+	public CreneauPraticien(Long id, int version, Date dtDebutPraticien, Date dtFinPraticien, Lieu lieu,
+=======
 	public CreneauPraticien(Long id, int version, Date dtDebutPraticien, Date dtFinPraticien, Lieu lieux,
+>>>>>>> main
 			Praticien praticien, CreneauUnitaire creneauUnitaire) {
 		this.id = id;
 		this.version = version;
 		this.dtDebutPraticien = dtDebutPraticien;
 		this.dtFinPraticien = dtFinPraticien;
-		this.lieux = lieux;
+		this.lieu = lieu;
 		this.praticien = praticien;
 		this.creneauUnitaire = creneauUnitaire;
 	}
@@ -146,7 +150,5 @@ public class CreneauPraticien {
 				+ ", dtFinPraticien=" + dtFinPraticien + ", creneauUnitaire=" + creneauUnitaire + "]";
 	}
 
-
-	
 		
 }
