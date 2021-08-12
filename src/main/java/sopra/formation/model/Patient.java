@@ -11,11 +11,6 @@ import javax.persistence.Version;
 
 @Entity
 public class Patient extends Personne{
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
-	@Version
-	private int version;
 	String numSecuriteSociale;
 	@OneToMany(mappedBy="patient")
 	private List<RDV> rdvs;
@@ -30,27 +25,9 @@ public class Patient extends Personne{
 		// TODO Auto-generated constructor stub
 	}
 
-	public Patient(Long id, int version, String numSecuriteSociale, List<RDV> rdvs) {
-		this.id = id;
-		this.version = version;
+	public Patient(String numSecuriteSociale, List<RDV> rdvs) {
 		this.numSecuriteSociale = numSecuriteSociale;
 		this.rdvs = rdvs;
-	}
-
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
-
-	public int getVersion() {
-		return version;
-	}
-
-	public void setVersion(int version) {
-		this.version = version;
 	}
 
 	public String getNumSecuriteSociale() {
