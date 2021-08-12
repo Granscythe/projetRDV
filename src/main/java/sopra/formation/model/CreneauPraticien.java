@@ -62,7 +62,7 @@ public class CreneauPraticien {
 		this.version = version;
 		this.dtDebutPraticien = dtDebutPraticien;
 		this.dtFinPraticien = dtFinPraticien;
-		this.lieu = lieu;
+		this.lieu = lieux;
 		this.praticien = praticien;
 		this.creneauUnitaire = creneauUnitaire;
 	}
