@@ -36,8 +36,8 @@ public class CreneauPraticien {
 	
 	
 	@ManyToOne
-	@JoinColumn(name="Lieux")
-	private Lieux lieux;
+	@JoinColumn(name="Lieu")
+	private Lieu lieu;
 	
 	@ManyToOne
 	@JoinColumn(name="Praticien")
@@ -105,13 +105,13 @@ public class CreneauPraticien {
 	}
 
 
-	public Lieux getLieux() {
-		return lieux;
+	public Lieu getLieu() {
+		return lieu;
 	}
 
 
-	public void setLieux(Lieux lieux) {
-		this.lieux = lieux;
+	public void setLieu(Lieu lieu) {
+		this.lieu = lieu;
 	}
 
 
@@ -140,5 +140,8 @@ public class CreneauPraticien {
 		return "CreneauPraticien [id=" + id + ", version=" + version + ", dtDebutPraticien=" + dtDebutPraticien
 				+ ", dtFinPraticien=" + dtFinPraticien + ", creneauUnitaire=" + creneauUnitaire + "]";
 	}
+
+
+	
 		
 }
