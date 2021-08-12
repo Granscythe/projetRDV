@@ -1,31 +1,29 @@
 package sopra.formation.model;
 
-import java.util.ArrayList;
 import java.util.List;
 
-import javax.persistence.Embedded;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.OneToMany;
 
 @Entity
 public class Praticien extends Personne{
 
-	
-	private List<Specialite> specialites = new ArrayList<Specialite>();
+	@Enumerated(EnumType.STRING)
+	private List<Specialite> specialites;
 	
 	@OneToMany(mappedBy = "praticien")
-	private List<Motif> motifs = new ArrayList<Motif>();
+	private List<Motif> motifs;
 			
 	@OneToMany(mappedBy = "praticien")
-	private List<RDV> rdvs = new ArrayList<RDV>();
-	
-
-
-	@OneToMany(mappedBy = "praticien")
-	private List<CreneauPraticien> creneauPraticien = new ArrayList<CreneauPraticien>();
+	private List<RDV> rdvs;
 	
 	@OneToMany(mappedBy = "praticien")
-	private List<PraticienLieu> praticienLieu = new ArrayList<PraticienLieu>();
+	private List<CreneauPraticien> creneauPraticien;
+	
+	@OneToMany(mappedBy = "praticien")
+	private List<PraticienLieu> praticienLieu;
 
 	public Praticien() {
 		super();

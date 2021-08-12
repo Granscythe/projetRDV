@@ -1,5 +1,7 @@
 package sopra.formation.model;
 
+import java.util.List;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -22,7 +24,7 @@ public class Motif {
 	private String intitule;
 	private Integer duree;
 	@OneToMany(mappedBy="motif")
-	private RDV rdv;
+	private List<RDV> rdv;
 	@ManyToOne
 	@JoinColumn(name="praticien")
 	private Praticien praticien;
@@ -32,7 +34,7 @@ public class Motif {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Motif(Long id, String intitule, Integer duree, RDV rdv, Praticien praticien) {
+	public Motif(Long id, String intitule, Integer duree, List<RDV> rdv, Praticien praticien) {
 		super();
 		this.id = id;
 		this.intitule = intitule;
@@ -41,7 +43,7 @@ public class Motif {
 		this.praticien = praticien;
 	}
 
-	public Motif(String intitule, Integer duree, RDV rdv, Praticien praticien) {
+	public Motif(String intitule, Integer duree, List<RDV> rdv, Praticien praticien) {
 		super();
 		this.intitule = intitule;
 		this.duree = duree;
@@ -81,11 +83,11 @@ public class Motif {
 		this.duree = duree;
 	}
 
-	public RDV getRdv() {
+	public List<RDV> getRdv() {
 		return rdv;
 	}
 
-	public void setRdv(RDV rdv) {
+	public void setRdv(List<RDV> rdv) {
 		this.rdv = rdv;
 	}
 
