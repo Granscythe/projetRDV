@@ -54,11 +54,13 @@ public class Patient extends Personne{
 		this.numSecuriteSociale = numSecuriteSociale;
 	}
 
-	public List<Patient> getPatients() {
-		return patients;
+	public List<RDV> getRDVS() {
+		return RDVS;
 	}
 
-	public void setPatients(List<Patient> patients) {
-		this.patients = patients;
+	public void setRDVS(List<RDV> rDVS) {
+		RDVS = rDVS;
 	}
+
+
 }
