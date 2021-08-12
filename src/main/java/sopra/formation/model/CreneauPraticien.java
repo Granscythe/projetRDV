@@ -36,8 +36,11 @@ public class CreneauPraticien {
 	
 	
 	@ManyToOne
-	@JoinColumn(name="Lieux")
+	@JoinColumn(name="Lieu")
 	private Lieu lieu;
+
+	@JoinColumn(name="Lieux")
+	private Lieu lieux;
 	
 	@ManyToOne
 	@JoinColumn(name="Praticien")
@@ -53,13 +56,13 @@ public class CreneauPraticien {
 	}
 
 
-	public CreneauPraticien(Long id, int version, Date dtDebutPraticien, Date dtFinPraticien, Lieu lieu,
+	public CreneauPraticien(Long id, int version, Date dtDebutPraticien, Date dtFinPraticien, Lieu lieux,
 			Praticien praticien, CreneauUnitaire creneauUnitaire) {
 		this.id = id;
 		this.version = version;
 		this.dtDebutPraticien = dtDebutPraticien;
 		this.dtFinPraticien = dtFinPraticien;
-		this.lieu = lieu;
+		this.lieu = lieux;
 		this.praticien = praticien;
 		this.creneauUnitaire = creneauUnitaire;
 	}
@@ -105,13 +108,13 @@ public class CreneauPraticien {
 	}
 
 
-	public Lieu getLieu() {
-		return lieu;
+	public Lieu getLieux() {
+		return lieux;
 	}
 
 
-	public void setLieux(Lieu lieu) {
-		this.lieu = lieu;
+	public void setLieux(Lieu lieux) {
+		this.lieux = lieux;
 	}
 
 
@@ -140,5 +143,6 @@ public class CreneauPraticien {
 		return "CreneauPraticien [id=" + id + ", version=" + version + ", dtDebutPraticien=" + dtDebutPraticien
 				+ ", dtFinPraticien=" + dtFinPraticien + ", creneauUnitaire=" + creneauUnitaire + "]";
 	}
+
 		
 }
