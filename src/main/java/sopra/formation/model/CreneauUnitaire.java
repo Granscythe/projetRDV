@@ -3,7 +3,6 @@ package sopra.formation.model;
 import java.util.Date;
 
 import javax.persistence.Column;
-import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -15,7 +14,6 @@ import javax.persistence.TemporalType;
 import javax.persistence.Version;
 
 @Entity
-@DiscriminatorValue("CreneauUnitaire")
 public class CreneauUnitaire {
 	
 	@Id
@@ -26,7 +24,7 @@ public class CreneauUnitaire {
 	private int version;
 	
 	@Temporal(TemporalType.DATE)
-	@Column(name="Date de debut unitaire")
+	@Column(name="DateDeDebutUnitaire")
 	private Date dtDebutUnitaire;
 	
 	@Column(name = "Duree")

@@ -1,5 +1,8 @@
 package sopra.formation.model;
 
+import javax.persistence.Entity;
+
+@Entity
 public class Admin  extends Personne{
 
 	public Admin() {
