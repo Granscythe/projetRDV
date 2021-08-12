@@ -34,6 +34,16 @@ public abstract class Personne {
 		this.mail = mail;
 		this.mdp = mdp;
 	}
+	
+	public Personne(Long id, String nom, String prenom, String mail, String mdp) {
+		super();
+		this.id = id;
+		this.nom = nom;
+		this.prenom = prenom;
+		this.mail = mail;
+		this.mdp = mdp;
+	}
+	
 	public String getNom() {
 		return nom;
 	}
