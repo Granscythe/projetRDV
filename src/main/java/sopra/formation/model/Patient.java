@@ -18,7 +18,7 @@ public class Patient extends Personne{
 	private int version;
 	String numSecuriteSociale;
 	@OneToMany(mappedBy="patient")
-	private List<Patient> patients;
+	private List<RDV> rdvs;
 
 	public Patient() {
 		super();
@@ -28,6 +28,13 @@ public class Patient extends Personne{
 	public Patient(Long id, int version, String mail, String mdp) {
 		super(id, version, mail, mdp);
 		// TODO Auto-generated constructor stub
+	}
+
+	public Patient(Long id, int version, String numSecuriteSociale, List<RDV> rdvs) {
+		this.id = id;
+		this.version = version;
+		this.numSecuriteSociale = numSecuriteSociale;
+		this.rdvs = rdvs;
 	}
 
 	public Long getId() {
@@ -54,11 +61,13 @@ public class Patient extends Personne{
 		this.numSecuriteSociale = numSecuriteSociale;
 	}
 
-	public List<Patient> getPatients() {
-		return patients;
+	public List<RDV> getRdvs() {
+		return rdvs;
 	}
 
-	public void setPatients(List<Patient> patients) {
-		this.patients = patients;
+	public void setRdvs(List<RDV> rdvs) {
+		this.rdvs = rdvs;
 	}
+
+	
 }
