@@ -109,11 +109,7 @@ public class CreneauPraticien {
 	}
 
 
-<<<<<<< Updated upstream
 	public Lieu getLieux() {
-=======
-	public Lieu getLieu() {
->>>>>>> Stashed changes
 		return lieux;
 	}
 
