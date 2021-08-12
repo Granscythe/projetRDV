@@ -32,7 +32,7 @@ public class RDV {
 	private Patient patient;
 	@ManyToOne
 	@JoinColumn(name="praticien")
-	private List<Praticien> praticien;
+	private Praticien praticien;
 	@OneToMany(mappedBy = "rdv")
 	private List<CreneauUnitaire> creneaux;
 	
@@ -43,7 +43,7 @@ public class RDV {
 	}
 
 
-	public RDV(Long id, Statut statut, Motif motif, Patient patient, List<Praticien> praticien,
+	public RDV(Long id, Statut statut, Motif motif, Patient patient, Praticien praticien,
 			List<CreneauUnitaire> creneaux) {
 		super();
 		this.id = id;
@@ -55,7 +55,7 @@ public class RDV {
 	}
 
 
-	public RDV(Statut statut, Motif motif, Patient patient, List<Praticien> praticien, List<CreneauUnitaire> creneaux) {
+	public RDV(Statut statut, Motif motif, Patient patient, Praticien praticien, List<CreneauUnitaire> creneaux) {
 		super();
 		this.statut = statut;
 		this.motif = motif;
@@ -115,12 +115,12 @@ public class RDV {
 	}
 
 
-	public List<Praticien> getPraticien() {
+	public Praticien getPraticien() {
 		return praticien;
 	}
 
 
-	public void setPraticien(List<Praticien> praticien) {
+	public void setPraticien(Praticien praticien) {
 		this.praticien = praticien;
 	}
 
