@@ -22,6 +22,13 @@ public abstract class Personne {
 	public Personne() {
 		super();
 	}
+	
+	public Personne(Long id, String mail, String mdp) {
+		super();
+		this.id = id;
+		this.mail = mail;
+		this.mdp = mdp;
+	}
 	public Personne(Long id, int version, String mail, String mdp) {
 		super();
 		this.id = id;

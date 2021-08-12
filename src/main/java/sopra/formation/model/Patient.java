@@ -20,8 +20,10 @@ public class Patient extends Personne{
 		// TODO Auto-generated constructor stub
 	}
 
-	public Patient(Long id, int version, String mail, String mdp) {
-		super(id, version, mail, mdp);
+	public Patient(Long id,  String mail, String mdp,String numSecuriteSociale, List<RDV> rdvs) {
+		super(id, mail, mdp);
+		this.numSecuriteSociale = numSecuriteSociale;
+		this.rdvs = rdvs;
 		// TODO Auto-generated constructor stub
 	}
 
