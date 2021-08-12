@@ -103,13 +103,9 @@ public class CreneauPraticien {
 	}
 
 
-<<<<<<< HEAD
-	public Lieu getLieux() {
-		return lieux;
-=======
+
 	public Lieu getLieu() {
 		return lieu;
->>>>>>> main
 	}
 
 
