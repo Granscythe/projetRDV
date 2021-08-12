@@ -4,7 +4,6 @@ import java.util.Date;
 import java.util.List;
 
 import javax.persistence.Column;
-import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -17,7 +16,6 @@ import javax.persistence.TemporalType;
 import javax.persistence.Version;
 
 @Entity
-@DiscriminatorValue("CreneauUnitaire")
 public class CreneauPraticien {
 	
 	@Id
@@ -28,13 +26,12 @@ public class CreneauPraticien {
 	private int version;
 	
 	@Temporal(TemporalType.DATE)
-	@Column(name="Date de debut praticien")
+	@Column(name="DateDeDebutPraticien")
 	private Date dtDebutPraticien;
 	
 	@Temporal(TemporalType.DATE)
-	@Column(name="Date de fin praticien")
+	@Column(name="DateDeFinPraticien")
 	private Date dtFinPraticien;
-	
 	
 	@ManyToOne
 	@JoinColumn(name="Lieu")
