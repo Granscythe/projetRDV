@@ -12,7 +12,7 @@ import javax.persistence.Version;
 @Inheritance(strategy=InheritanceType.TABLE_PER_CLASS)
 public abstract class Personne {
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.TABLE)
 	private Long id;
 	@Version
 	private int version;
