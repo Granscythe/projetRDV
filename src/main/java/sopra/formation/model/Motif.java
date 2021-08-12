@@ -42,6 +42,13 @@ public class Motif {
 		this.rdv = rdv;
 		this.praticien = praticien;
 	}
+	
+	public Motif(Long id, String intitule, Integer duree) {
+		super();
+		this.id = id;
+		this.intitule = intitule;
+		this.duree = duree;
+	}
 
 	public Motif(String intitule, Integer duree, List<RDV> rdv, Praticien praticien) {
 		super();
