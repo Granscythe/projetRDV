@@ -1,6 +1,7 @@
 package sopra.formation.model;
 
 import java.util.Date;
+import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.DiscriminatorValue;
@@ -39,30 +40,27 @@ public class CreneauPraticien {
 	@JoinColumn(name="Lieu")
 	private Lieu lieu;
 
-	@JoinColumn(name="Lieux")
-	private Lieu lieux;
 	
 	@ManyToOne
 	@JoinColumn(name="Praticien")
 	private Praticien praticien;
 	
-	@OneToMany(mappedBy = "CreneauPraticien")
-	private CreneauUnitaire creneauUnitaire;
+	@OneToMany(mappedBy = "creneauPraticien")
+	private List<CreneauUnitaire> creneauUnitaire;
 
-	
 	
 	public CreneauPraticien() {
 		super();
 	}
 
 
-	public CreneauPraticien(Long id, int version, Date dtDebutPraticien, Date dtFinPraticien, Lieu lieux,
-			Praticien praticien, CreneauUnitaire creneauUnitaire) {
+	public CreneauPraticien(Long id, int version, Date dtDebutPraticien, Date dtFinPraticien, Lieu lieu,
+			Praticien praticien, List<CreneauUnitaire> creneauUnitaire) {
 		this.id = id;
 		this.version = version;
 		this.dtDebutPraticien = dtDebutPraticien;
 		this.dtFinPraticien = dtFinPraticien;
-		this.lieu = lieux;
+		this.lieu = lieu;
 		this.praticien = praticien;
 		this.creneauUnitaire = creneauUnitaire;
 	}
@@ -108,13 +106,13 @@ public class CreneauPraticien {
 	}
 
 
-	public Lieu getLieux() {
-		return lieux;
+	public Lieu getLieu() {
+		return lieu;
 	}
 
 
-	public void setLieux(Lieu lieux) {
-		this.lieux = lieux;
+	public void setLieu(Lieu lieu) {
+		this.lieu = lieu;
 	}
 
 
@@ -128,12 +126,12 @@ public class CreneauPraticien {
 	}
 
 
-	public CreneauUnitaire getCreneauUnitaire() {
+	public List<CreneauUnitaire> getCreneauUnitaire() {
 		return creneauUnitaire;
 	}
 
 
-	public void setCreneauUnitaire(CreneauUnitaire creneauUnitaire) {
+	public void setCreneauUnitaire(List<CreneauUnitaire> creneauUnitaire) {
 		this.creneauUnitaire = creneauUnitaire;
 	}
 
@@ -141,8 +139,8 @@ public class CreneauPraticien {
 	@Override
 	public String toString() {
 		return "CreneauPraticien [id=" + id + ", version=" + version + ", dtDebutPraticien=" + dtDebutPraticien
-				+ ", dtFinPraticien=" + dtFinPraticien + ", creneauUnitaire=" + creneauUnitaire + "]";
+				+ ", dtFinPraticien=" + dtFinPraticien + ", lieu=" + lieu + ", praticien=" + praticien
+				+ ", creneauUnitaire=" + creneauUnitaire + "]";
 	}
-
-		
+	
 }
