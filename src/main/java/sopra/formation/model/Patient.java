@@ -10,6 +10,10 @@ public class Patient extends Personne{
 	String numSecuriteSociale;
 	@OneToMany(mappedBy="patient")
 	private List<RDV> rdvs;
+	
+	public Patient() {
+		super();
+	}
 
 	public Patient(Long id, int version, String nom, String prenom, String mail, String mdp, String numSecuriteSociale,
 			List<RDV> rdvs) {
