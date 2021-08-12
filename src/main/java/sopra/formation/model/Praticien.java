@@ -3,16 +3,10 @@ package sopra.formation.model;
 import java.util.List;
 
 import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
 import javax.persistence.OneToMany;
 
 @Entity
 public class Praticien extends Personne{
-
-	@Enumerated(EnumType.STRING)
-	private List<Specialite> specialites;
-	
 	@OneToMany(mappedBy = "praticien")
 	private List<Motif> motifs;
 			
@@ -24,6 +18,8 @@ public class Praticien extends Personne{
 	
 	@OneToMany(mappedBy = "praticien")
 	private List<PraticienLieu> praticienLieu;
+	@OneToMany(mappedBy = "praticien")
+	private List<SpecialitePraticien> specialite;
 
 	public Praticien() {
 		super();
@@ -35,22 +31,25 @@ public class Praticien extends Personne{
 		
 	}
 
-	public Praticien(Long id, int version, String mail, String mdp, List<Specialite> specialites, List<Motif> motifs, List<RDV> rdvs,
-			List<CreneauPraticien> creneauPraticien, List<PraticienLieu> praticienLieu) {
-		super(id, version, mail, mdp);
-		this.specialites = specialites;
+
+
+	public Praticien(List<Motif> motifs, List<RDV> rdvs, List<CreneauPraticien> creneauPraticien,
+			List<PraticienLieu> praticienLieu, List<SpecialitePraticien> specialite) {
+		super();
 		this.motifs = motifs;
 		this.rdvs = rdvs;
 		this.creneauPraticien = creneauPraticien;
 		this.praticienLieu = praticienLieu;
+		this.specialite = specialite;
 	}
 
-	public List<Specialite> getSpecialites() {
-		return specialites;
+	
+	public List<SpecialitePraticien> getSpecialite() {
+		return specialite;
 	}
 
-	public void setSpecialites(List<Specialite> specialites) {
-		this.specialites = specialites;
+	public void setSpecialite(List<SpecialitePraticien> specialite) {
+		this.specialite = specialite;
 	}
 
 	public List<Motif> getMotifs() {
