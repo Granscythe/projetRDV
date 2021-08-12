@@ -16,18 +16,35 @@ public abstract class Personne {
 	private Long id;
 	@Version
 	private int version;
+	private String nom;
+	private String prenom;
 	private String mail;
 	private String mdp;
+	
 	
 	public Personne() {
 		super();
 	}
-	public Personne(Long id, int version, String mail, String mdp) {
+	public Personne(Long id, int version, String nom, String prenom, String mail, String mdp) {
 		super();
 		this.id = id;
 		this.version = version;
+		this.nom = nom;
+		this.prenom = prenom;
 		this.mail = mail;
 		this.mdp = mdp;
+	}
+	public String getNom() {
+		return nom;
+	}
+	public void setNom(String nom) {
+		this.nom = nom;
+	}
+	public String getPrenom() {
+		return prenom;
+	}
+	public void setPrenom(String prenom) {
+		this.prenom = prenom;
 	}
 	public Long getId() {
 		return id;
