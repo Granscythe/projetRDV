@@ -26,10 +26,12 @@ public class Praticien extends Personne{
 		
 	}
 
-	public Praticien(Long id, int version, String mail, String mdp) {
-		super(id, version, mail, mdp);
-		
+	public Praticien(Long id, int version, String nom, String prenom, String mail, String mdp) {
+		super(id, version, nom, prenom, mail, mdp);
+		// TODO Auto-generated constructor stub
 	}
+
+
 
 
 
