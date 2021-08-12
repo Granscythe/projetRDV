@@ -36,8 +36,12 @@ public class CreneauPraticien {
 	
 	
 	@ManyToOne
+<<<<<<< Updated upstream
 	@JoinColumn(name="Lieu")
 	private Lieu lieu;
+=======
+	@JoinColumn(name="Lieux")
+	private Lieu lieux;
 	
 	@ManyToOne
 	@JoinColumn(name="Praticien")
@@ -53,7 +57,11 @@ public class CreneauPraticien {
 	}
 
 
+<<<<<<< HEAD
 	public CreneauPraticien(Long id, int version, Date dtDebutPraticien, Date dtFinPraticien, Lieu lieu,
+=======
+	public CreneauPraticien(Long id, int version, Date dtDebutPraticien, Date dtFinPraticien, Lieu lieux,
+>>>>>>> main
 			Praticien praticien, CreneauUnitaire creneauUnitaire) {
 		this.id = id;
 		this.version = version;
@@ -105,13 +113,14 @@ public class CreneauPraticien {
 	}
 
 
-	public Lieu getLieu() {
-		return lieu;
+	public Lieu getLieux() {
+		return lieux;
 	}
 
 
-	public void setLieu(Lieu lieu) {
-		this.lieu = lieu;
+	public void setLieux(Lieu lieux) {
+		this.lieux = lieux;
+>>>>>>> Stashed changes
 	}
 
 
