@@ -18,7 +18,7 @@ public class Patient extends Personne{
 	private int version;
 	String numSecuriteSociale;
 	@OneToMany(mappedBy="patient")
-	private List<Patient> patients;
+	private List<RDV> RDVS;
 
 	public Patient() {
 		super();
