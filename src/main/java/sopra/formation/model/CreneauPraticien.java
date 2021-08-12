@@ -36,8 +36,13 @@ public class CreneauPraticien {
 	
 	
 	@ManyToOne
+<<<<<<< Updated upstream
 	@JoinColumn(name="Lieu")
 	private Lieu lieu;
+=======
+	@JoinColumn(name="Lieux")
+	private Lieu lieux;
+>>>>>>> Stashed changes
 	
 	@ManyToOne
 	@JoinColumn(name="Praticien")
@@ -106,12 +111,21 @@ public class CreneauPraticien {
 
 
 	public Lieu getLieu() {
+<<<<<<< Updated upstream
 		return lieu;
 	}
 
 
 	public void setLieu(Lieu lieu) {
 		this.lieu = lieu;
+=======
+		return lieux;
+	}
+
+
+	public void setLieu(Lieu lieux) {
+		this.lieux = lieux;
+>>>>>>> Stashed changes
 	}
 
 
